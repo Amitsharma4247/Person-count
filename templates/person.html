@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Person Detection and Counting</title>
+    <center>
+        <header>
+            <H1>STAGE<BR>
+                ONE</H1>
+        </header>
+    </center>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: lightgrey;
+        }
+        h1 {
+            color: rgb(0, 0, 0);
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+        }
+        .image-container img {
+            max-height: 100%;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .form-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 5px;
+        }
+        form button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+  </head>
+  <body>
+    <br>
+    <center>
+        <h1>Person Detection and Counting</h1>
+    </center>
+    <br>
+
+    <div class="image-container">
+        <img src="{{ url_for('video_feed') }}">
+    </div>
+
+    <div class="form-container">
+        <form action="/stop" method="post">
+            <button type="submit">Stop Detection and Counting</button>
+        </form>
+    </div>
+
+</body>
+</html>
